@@ -1,3 +1,4 @@
+'use strict';
 /**
  * @const path 路径模块
  * @const CleanWebpackPlugin 删除文件
