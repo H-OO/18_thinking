@@ -8,6 +8,7 @@
 const path = require('path');
 const merge = require('webpack-merge');
 const base = require('./webpack.base.js');
+const webpack = require('webpack');
 const devConfig = {
   mode: 'development',
   devtool: 'inline-source-map',
@@ -16,8 +17,12 @@ const devConfig = {
     // port: '5000', // 端口，默认8080
     contentBase: path.resolve(__dirname, '../dist'), // devServer访问该目录的文件
     openPage: 'demo/demo.html', // 【默认打开页面】！！！
-    inline: true // 用来支持dev-server自动刷新的配置
+    // inline: true // 用来支持dev-server自动刷新的配置
+    // hot: true
   },
+  // plugins: [
+  //   new webpack.HotModuleReplacementPlugin()
+  // ],
   output: {
     publicPath: '/' // 静态资源路径 (start /) (build ../)
   }
